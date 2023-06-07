@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JE ART - Loja de venda de quadros</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logotipo.jpg" type="image/x-icon">
+
+
+      <style>
+            /* Estilize o carrossel */
+            .carousel {
+              width: 1350px;
+              height: 600px;
+              overflow: hidden;
+              text-align: center;
+              
+          
+            }
+
+            body{
+             background-color: darkslategrey;
+            }
+        
+            /* Estilize os slides */
+            .carousel-slide {
+              display: none;
+              width: 100%;
+              height: 100%;
+            }
+        
+            /* Estilize os botões de navegação */
+            .carousel-nav {
+              text-align: center;
+            }
+        
+            .carousel-nav button {
+              display: inline-block;
+              margin: 5px;
+              padding: 5px 10px;
+              background: #ccc;
+              border: none;
+              cursor: pointer;
+            }
+        .form-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 100px;
+        }
+        h2{
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        .adm{
+          border: 1px solid red;
+          background-color: red;
+          width: 100px;
+          text-decoration: none;
+          color: white;
+          text-align: center;
+        }
+        .form-submit {
+            width: 100%;
+            padding: 10px;
+            border-radius: 3px;
+            background-color: #4CAF50;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Animação */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animated {
+            animation: slideIn 0.5s ease-in-out;
+        }
+        .login-container {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            animation: fadein 1s;
+          }
+      
+          @keyframes fadein {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+      
+          .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+      
+          .form-group {
+            margin-bottom: 20px;
+          }
+      
+          .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+      
+          .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+      
+          .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+          }
+      
+          .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+          }
+    </style>
+  
+  </head>
+<body>
+    <div style="background-color: black; height: 110px; width:100%;"></div>
+        <img class="logo" src="img/JEART.jpg" alt="" >
+
+        <div class="JEART">
+            <div class="colorful-text">
+                <span>J</span>
+                <span>E</span>
+                <span>A</span>
+                <span>R</span>
+                <span>T</span>
+              </div>
+        </div>
+
+        <a class="sign" href="#" onclick="showSignUp()">Login</a>
+
+        <div id="signup-modal" class="modal">
+          <div class="modal-content">
+            <!-- Conteúdo do formulário de cadastro -->
+            <div class="login-container">
+                <h2>Tela de Login</h2>
+                <form action="login.php" method="post">
+                  <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email_usuario" name="email" placeholder="Digite o seu email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="senha_usuario" name="senha" placeholder="Digite a sua senha" required>
+                  </div>
+                  <div class="form-group">
+                  <input type="submit" id="btn_logar" name="submit"  value="Entrar">
+                  </div>
+                </form>
+              </div>
+        
+            <script>
+                window.addEventListener('DOMContentLoaded', function() {
+                    var formContainer = document.querySelector('.form-container');
+                    formContainer.classList.add('animated');
+                });
+            </script>
+            <script src="js/script.js"></script>
+             
+            <p class="cada">Nao tem uma conta? Clique <a href="cadastro.php">aqui</a></p>
+        
+      
+            <button class="close" onclick="closeSignUp()">Sair</button>
+          </div>
+        </div>
+      
+      
+        <script>
+            function showSignUp() {
+                var modal = document.getElementById("signup-modal");
+                modal.style.display = "block";
+              }
+              
+              function closeSignUp() {
+                var modal = document.getElementById("signup-modal");
+                modal.style.display = "none";
+              }
+              
+            </script>
+
+        
+               
+        
+        <div class="carousel">
+            <img class="carousel-slide" src="img/12.png" alt="Imagem 1">
+            <img class="carousel-slide" src="img/AA.jpg" alt="Imagem 2">
+            <img class="carousel-slide" src="img/BBr.jpg" alt="Imagem 3">
+          </div>
+        
+          
+        
+          <script>
+            var slideIndex = 0;
+            showSlide(slideIndex);
+        
+            function nextSlide() {
+              showSlide(slideIndex + 1);
+            }
+        
+            function prevSlide() {
+              showSlide(slideIndex - 1);
+            }
+        
+            function showSlide(index) {
+              var slides = document.getElementsByClassName("carousel-slide");
+        
+              // Verifique se o índice está dentro do intervalo de slides
+              if (index >= slides.length) {
+                slideIndex = 0;
+              } else if (index < 0) {
+                slideIndex = slides.length - 1;
+              } else {
+                slideIndex = index;
+              }
+        
+              // Oculte todos os slides
+              for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+        
+              // Mostre o slide atual
+              slides[slideIndex].style.display = "block";
+            }
+        
+            // Função para avançar automaticamente os slides
+            function autoPlay() {
+              nextSlide();
+            }
+        
+            // Defina um intervalo de tempo para avançar automaticamente os slides
+            setInterval(autoPlay, 3000); // 3000 milissegundos = 3 segundos
+          </script>
+    </div>
+     
+    <Pre>                                                                                                                                                                                 <a class="adm" href="loginAdmin.php">ADMIN</a></Pre>
+    <p class="texto">
+      INSCREVA-SE E VEJA OS MELHORES QUADROS DO MERCADO  
+    </p>
+    <p class="def">
+      CONCEITO <br>
+    A JEART é uma galeria de arte on-line. A JEART se destaca pela qualidade das impressões e pelo compromisso com a arte que inspira.
+    Nossa galeria de arte oferece quadros acessíves e colecionáveis, tornando possível que qualquer pessoa possa ter uma obra de arte em sua casa ou espaço de trabalho. Acreditamos que a arte é uma expressão poderosa da criatividade humana e deve
+    estar disponível para todos. Buscamos valorizar o talento e as emoções que se escondem por trás de cada obra de arte, tornando-as acessíveis a um público mais amplo. Nosso objetivo é inspirar a mente e a alma das pessoas, tornando suas vidas mais coloridas e vibrantes.
+    </p>
+
+
+
+
+</body>
+</html>
